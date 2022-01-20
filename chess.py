@@ -31,14 +31,14 @@ bkn = Piece('b', 'kn', 'b_knight.png')
 wkn = Piece('w', 'kn', 'w_knight.png')
 
 
-starting_order = {(0, 0): pygame.image.load(br.image), (1, 0): pygame.image.load(bkn.image),
-                  (2, 0): pygame.image.load(bb.image), (3, 0): pygame.image.load(bk.image),
-                  (4, 0): pygame.image.load(bq.image), (5, 0): pygame.image.load(bb.image),
-                  (6, 0): pygame.image.load(bkn.image), (7, 0): pygame.image.load(br.image),
-                  (0, 1): pygame.image.load(bp.image), (1, 1): pygame.image.load(bp.image),
-                  (2, 1): pygame.image.load(bp.image), (3, 1): pygame.image.load(bp.image),
-                  (4, 1): pygame.image.load(bp.image), (5, 1): pygame.image.load(bp.image),
-                  (6, 1): pygame.image.load(bp.image), (7, 1): pygame.image.load(bp.image),
+starting_order = {(0, 0): None, (1, 0): None,
+                  (2, 0): None, (3, 0): pygame.image.load(bk.image),
+                  (4, 0): None, (5, 0): None,
+                  (6, 0): None, (7, 0): None,
+                  (0, 1): None, (1, 1): None,
+                  (2, 1): None, (3, 1): None,
+                  (4, 1): None, (5, 1): None,
+                  (6, 1): None, (7, 1): None,
 
                   (0, 2): None, (1, 2): None, (2, 2): None, (3, 2): None,
                   (4, 2): None, (5, 2): None, (6, 2): None, (7, 2): None,
@@ -49,14 +49,14 @@ starting_order = {(0, 0): pygame.image.load(br.image), (1, 0): pygame.image.load
                   (0, 5): None, (1, 5): None, (2, 5): None, (3, 5): None,
                   (4, 5): None, (5, 5): None, (6, 5): None, (7, 5): None,
 
-                  (0, 6): pygame.image.load(wp.image), (1, 6): pygame.image.load(wp.image),
-                  (2, 6): pygame.image.load(wp.image), (3, 6): pygame.image.load(wp.image),
-                  (4, 6): pygame.image.load(wp.image), (5, 6): pygame.image.load(wp.image),
-                  (6, 6): pygame.image.load(wp.image), (7, 6): pygame.image.load(wp.image),
-                  (0, 7): pygame.image.load(wr.image), (1, 7): pygame.image.load(wkn.image),
-                  (2, 7): pygame.image.load(wb.image), (3, 7): pygame.image.load(wk.image),
-                  (4, 7): pygame.image.load(wq.image), (5, 7): pygame.image.load(wb.image),
-                  (6, 7): pygame.image.load(wkn.image), (7, 7): pygame.image.load(wr.image),}
+                  (0, 6): None, (1, 6): None,
+                  (2, 6): None, (3, 6): None,
+                  (4, 6): None, (5, 6): None,
+                  (6, 6): None, (7, 6): None,
+                  (0, 7): None, (1, 7): pygame.image.load(wkn.image),
+                  (2, 7): pygame.image.load(wb.image), (3, 7): None,
+                  (4, 7): None, (5, 7): pygame.image.load(wb.image),
+                  (6, 7): None, (7, 7): pygame.image.load(wr.image),}
 
 
 def create_board(board):
@@ -392,7 +392,7 @@ def main(WIN, WIDTH):
     while True:
         pygame.time.delay(50) ##stops cpu dying
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == QUIT:
                 pygame.quit()
                 sys.exit()
 
