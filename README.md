@@ -2,7 +2,7 @@
 
 ## Background:
 1. There exists a normal chess board with two sides the White (Angels) and the Black (Demons).
-1. The Angels' side contains 1 King only.
+1. The Angels' side contains 1 King only. The catch is that the where the king moves one pawn will spawn in it previous square.
 1. The Demons' side contains 2 Rooks, 2 Knights and 2 Bishops.
 
 ## Gameplay:
